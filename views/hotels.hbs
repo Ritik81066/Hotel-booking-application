@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>Available Hotels</h2>
+<div class="hotel-list">
+  {{#each hotels}}
+    <div class="hotel-card">
+      <img src="{{this.image}}" alt="{{this.name}}">
+      <h3>{{this.name}}</h3>
+      <p>{{this.location}}</p>
+      <p>₹{{this.price}} / night</p>
+      <a href="/hotels/{{this.id}}">View Details</a>
+    </div>
+  {{/each}}
+</div>
+
+
+</body>
+</html>

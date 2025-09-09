@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<h2>{{hotel.name}}</h2>
+<img src="{{hotel.image}}" alt="{{hotel.name}}">
+<p><strong>Location:</strong> {{hotel.location}}</p>
+<p><strong>Price:</strong> ₹{{hotel.price}} / night</p>
+<p>{{hotel.description}}</p>
+
+<form action="/book/{{hotel.id}}" method="POST">
+  <label>Your Name:</label>
+  <input type="text" name="name" required>
+  <button type="submit">Book Now</button>
+</form>
+
+
+    <h3>Comments</h3>
+    <ul>
+        {{#each hotel.comments}}
+        <li>{{this}}</li>
+        {{/each}}
+    </ul>
+
+</body>
+</html>
